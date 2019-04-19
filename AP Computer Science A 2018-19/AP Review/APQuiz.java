@@ -17,6 +17,7 @@ public class APQuiz {
 
 		sum = sum2D(arr);
 		System.out.println(sum);
+		System.out.println("test");
 	}
 
 	//Task 1
