@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="25dp"
+    android:paddingBottom="25dp">
+
+    <ImageView
+        android:id="@+id/id_imageview_portrait"
+        android:layout_width="125dp"
+        android:layout_height="125dp"
+        android:layout_marginRight="25dp"
+        android:layout_weight="0"
+        app:srcCompat="@mipmap/ic_launcher" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="0"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/id_textview_stagename"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="TextView"
+            android:textColor="#000000"
+            android:textSize="24sp"
+            app:fontFamily="sans-serif-thin" />
+
+        <TextView
+            android:id="@+id/id_textview_genre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="TextView"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            app:fontFamily="sans-serif-thin" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/id_imageview_remove"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_weight="0"
+        app:srcCompat="@drawable/removeicon" />
+
+</LinearLayout>
