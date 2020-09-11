@@ -1,0 +1,24 @@
+/Users/melvinrajendran/Projects/Demo1/Demo1/bin/Debug/netcoreapp3.1/Demo1.deps.json
+/Users/melvinrajendran/Projects/Demo1/Demo1/bin/Debug/netcoreapp3.1/Demo1.runtimeconfig.json
+/Users/melvinrajendran/Projects/Demo1/Demo1/bin/Debug/netcoreapp3.1/Demo1.runtimeconfig.dev.json
+/Users/melvinrajendran/Projects/Demo1/Demo1/bin/Debug/netcoreapp3.1/Demo1.dll
+/Users/melvinrajendran/Projects/Demo1/Demo1/bin/Debug/netcoreapp3.1/Demo1.pdb
+/Users/melvinrajendran/Projects/Demo1/Demo1/obj/Debug/netcoreapp3.1/Demo1.csprojAssemblyReference.cache
+/Users/melvinrajendran/Projects/Demo1/Demo1/obj/Debug/netcoreapp3.1/Demo1.AssemblyInfoInputs.cache
+/Users/melvinrajendran/Projects/Demo1/Demo1/obj/Debug/netcoreapp3.1/Demo1.AssemblyInfo.cs
+/Users/melvinrajendran/Projects/Demo1/Demo1/obj/Debug/netcoreapp3.1/Demo1.csproj.CoreCompileInputs.cache
+/Users/melvinrajendran/Projects/Demo1/Demo1/obj/Debug/netcoreapp3.1/Demo1.dll
+/Users/melvinrajendran/Projects/Demo1/Demo1/obj/Debug/netcoreapp3.1/Demo1.pdb
+/Users/melvinrajendran/Projects/Demo1/Demo1/obj/Debug/netcoreapp3.1/Demo1.genruntimeconfig.cache
+/Users/melvinrajendran/Desktop/VR and Game Development/Demo1/Demo1/bin/Debug/netcoreapp3.1/Demo1.deps.json
+/Users/melvinrajendran/Desktop/VR and Game Development/Demo1/Demo1/bin/Debug/netcoreapp3.1/Demo1.runtimeconfig.json
+/Users/melvinrajendran/Desktop/VR and Game Development/Demo1/Demo1/bin/Debug/netcoreapp3.1/Demo1.runtimeconfig.dev.json
+/Users/melvinrajendran/Desktop/VR and Game Development/Demo1/Demo1/bin/Debug/netcoreapp3.1/Demo1.dll
+/Users/melvinrajendran/Desktop/VR and Game Development/Demo1/Demo1/bin/Debug/netcoreapp3.1/Demo1.pdb
+/Users/melvinrajendran/Desktop/VR and Game Development/Demo1/Demo1/obj/Debug/netcoreapp3.1/Demo1.csprojAssemblyReference.cache
+/Users/melvinrajendran/Desktop/VR and Game Development/Demo1/Demo1/obj/Debug/netcoreapp3.1/Demo1.AssemblyInfoInputs.cache
+/Users/melvinrajendran/Desktop/VR and Game Development/Demo1/Demo1/obj/Debug/netcoreapp3.1/Demo1.AssemblyInfo.cs
+/Users/melvinrajendran/Desktop/VR and Game Development/Demo1/Demo1/obj/Debug/netcoreapp3.1/Demo1.csproj.CoreCompileInputs.cache
+/Users/melvinrajendran/Desktop/VR and Game Development/Demo1/Demo1/obj/Debug/netcoreapp3.1/Demo1.dll
+/Users/melvinrajendran/Desktop/VR and Game Development/Demo1/Demo1/obj/Debug/netcoreapp3.1/Demo1.pdb
+/Users/melvinrajendran/Desktop/VR and Game Development/Demo1/Demo1/obj/Debug/netcoreapp3.1/Demo1.genruntimeconfig.cache
