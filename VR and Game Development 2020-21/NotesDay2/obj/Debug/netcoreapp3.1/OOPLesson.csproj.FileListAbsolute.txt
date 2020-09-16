@@ -1,0 +1,12 @@
+/Users/melvinrajendran/Desktop/VR and Game Development 2020-21/NotesDay2/bin/Debug/netcoreapp3.1/OOPLesson.deps.json
+/Users/melvinrajendran/Desktop/VR and Game Development 2020-21/NotesDay2/bin/Debug/netcoreapp3.1/OOPLesson.runtimeconfig.json
+/Users/melvinrajendran/Desktop/VR and Game Development 2020-21/NotesDay2/bin/Debug/netcoreapp3.1/OOPLesson.runtimeconfig.dev.json
+/Users/melvinrajendran/Desktop/VR and Game Development 2020-21/NotesDay2/bin/Debug/netcoreapp3.1/OOPLesson.dll
+/Users/melvinrajendran/Desktop/VR and Game Development 2020-21/NotesDay2/bin/Debug/netcoreapp3.1/OOPLesson.pdb
+/Users/melvinrajendran/Desktop/VR and Game Development 2020-21/NotesDay2/obj/Debug/netcoreapp3.1/OOPLesson.csprojAssemblyReference.cache
+/Users/melvinrajendran/Desktop/VR and Game Development 2020-21/NotesDay2/obj/Debug/netcoreapp3.1/OOPLesson.AssemblyInfoInputs.cache
+/Users/melvinrajendran/Desktop/VR and Game Development 2020-21/NotesDay2/obj/Debug/netcoreapp3.1/OOPLesson.AssemblyInfo.cs
+/Users/melvinrajendran/Desktop/VR and Game Development 2020-21/NotesDay2/obj/Debug/netcoreapp3.1/OOPLesson.csproj.CoreCompileInputs.cache
+/Users/melvinrajendran/Desktop/VR and Game Development 2020-21/NotesDay2/obj/Debug/netcoreapp3.1/OOPLesson.dll
+/Users/melvinrajendran/Desktop/VR and Game Development 2020-21/NotesDay2/obj/Debug/netcoreapp3.1/OOPLesson.pdb
+/Users/melvinrajendran/Desktop/VR and Game Development 2020-21/NotesDay2/obj/Debug/netcoreapp3.1/OOPLesson.genruntimeconfig.cache
