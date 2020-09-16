@@ -3,7 +3,7 @@ import java.util.ArrayList;
 
 public class AmicableNumbers {
     public static void main(String[] args) {
-        File fileName = new File("/Users/melvinrajendran/Desktop/Data Structures/Reading .txt Files/Amicable Numbers Activity/AmicableNumsFile.txt");
+        File fileName = new File("/Users/melvinrajendran/Desktop/Data Structures 2020-21/Reading .txt Files/Amicable Numbers Activity/AmicableNumsFile.txt");
 
         try {
             BufferedReader input = new BufferedReader(new FileReader(fileName));
@@ -62,15 +62,27 @@ public class AmicableNumbers {
         ArrayList<Integer> list = findFactors(num);
         int sum = 0;
 
-        System.out.print("\tThe factors of " + num + " are ");
-        for (int i = 0; i < list.size(); i++) {
-            sum += list.get(i);
+        if (list.size() == 1) {
+            sum += list.get(0);
+            
+            System.out.print("\tThe factor of " + num + " is " + list.get(0));
+        } else if (list.size() == 2) {
+            sum += list.get(0);
+            sum += list.get(1);
 
-            if (i != list.size() - 1) {
-                System.out.print(list.get(i) + ", ");
-            } else {
-                System.out.println("and " + list.get(i) + ". Sum is " + sum + ".");
+            System.out.print("\tThe factors of " + num + " are " + list.get(0) + " and " + list.get(1));
+        } else {
+            System.out.print("\tThe factors of " + num + " are ");
+            for (int i = 0; i < list.size(); i++) {
+                sum += list.get(i);
+
+                if (i != list.size() - 1) {
+                    System.out.print(list.get(i) + ", ");
+                } else {
+                    System.out.print("and " + list.get(i));
+                }
             }
         }
+        System.out.println(". Sum is " + sum + ".");
     }
 }
