@@ -1,0 +1,12 @@
+/Users/melvinrajendran/Desktop/VR and Game Development 2020-21/DelegatesApplication/bin/Debug/netcoreapp3.1/DelegatesApplication.deps.json
+/Users/melvinrajendran/Desktop/VR and Game Development 2020-21/DelegatesApplication/bin/Debug/netcoreapp3.1/DelegatesApplication.runtimeconfig.json
+/Users/melvinrajendran/Desktop/VR and Game Development 2020-21/DelegatesApplication/bin/Debug/netcoreapp3.1/DelegatesApplication.runtimeconfig.dev.json
+/Users/melvinrajendran/Desktop/VR and Game Development 2020-21/DelegatesApplication/bin/Debug/netcoreapp3.1/DelegatesApplication.dll
+/Users/melvinrajendran/Desktop/VR and Game Development 2020-21/DelegatesApplication/bin/Debug/netcoreapp3.1/DelegatesApplication.pdb
+/Users/melvinrajendran/Desktop/VR and Game Development 2020-21/DelegatesApplication/obj/Debug/netcoreapp3.1/DelegatesApplication.csprojAssemblyReference.cache
+/Users/melvinrajendran/Desktop/VR and Game Development 2020-21/DelegatesApplication/obj/Debug/netcoreapp3.1/DelegatesApplication.AssemblyInfoInputs.cache
+/Users/melvinrajendran/Desktop/VR and Game Development 2020-21/DelegatesApplication/obj/Debug/netcoreapp3.1/DelegatesApplication.AssemblyInfo.cs
+/Users/melvinrajendran/Desktop/VR and Game Development 2020-21/DelegatesApplication/obj/Debug/netcoreapp3.1/DelegatesApplication.csproj.CoreCompileInputs.cache
+/Users/melvinrajendran/Desktop/VR and Game Development 2020-21/DelegatesApplication/obj/Debug/netcoreapp3.1/DelegatesApplication.dll
+/Users/melvinrajendran/Desktop/VR and Game Development 2020-21/DelegatesApplication/obj/Debug/netcoreapp3.1/DelegatesApplication.pdb
+/Users/melvinrajendran/Desktop/VR and Game Development 2020-21/DelegatesApplication/obj/Debug/netcoreapp3.1/DelegatesApplication.genruntimeconfig.cache
