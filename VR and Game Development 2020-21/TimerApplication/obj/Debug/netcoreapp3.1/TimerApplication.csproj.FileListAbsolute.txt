@@ -1,0 +1,12 @@
+/Users/melvinrajendran/Desktop/VR and Game Development 2020-21/TimerApplication/bin/Debug/netcoreapp3.1/TimerApplication.deps.json
+/Users/melvinrajendran/Desktop/VR and Game Development 2020-21/TimerApplication/bin/Debug/netcoreapp3.1/TimerApplication.runtimeconfig.json
+/Users/melvinrajendran/Desktop/VR and Game Development 2020-21/TimerApplication/bin/Debug/netcoreapp3.1/TimerApplication.runtimeconfig.dev.json
+/Users/melvinrajendran/Desktop/VR and Game Development 2020-21/TimerApplication/bin/Debug/netcoreapp3.1/TimerApplication.dll
+/Users/melvinrajendran/Desktop/VR and Game Development 2020-21/TimerApplication/bin/Debug/netcoreapp3.1/TimerApplication.pdb
+/Users/melvinrajendran/Desktop/VR and Game Development 2020-21/TimerApplication/obj/Debug/netcoreapp3.1/TimerApplication.csprojAssemblyReference.cache
+/Users/melvinrajendran/Desktop/VR and Game Development 2020-21/TimerApplication/obj/Debug/netcoreapp3.1/TimerApplication.AssemblyInfoInputs.cache
+/Users/melvinrajendran/Desktop/VR and Game Development 2020-21/TimerApplication/obj/Debug/netcoreapp3.1/TimerApplication.AssemblyInfo.cs
+/Users/melvinrajendran/Desktop/VR and Game Development 2020-21/TimerApplication/obj/Debug/netcoreapp3.1/TimerApplication.csproj.CoreCompileInputs.cache
+/Users/melvinrajendran/Desktop/VR and Game Development 2020-21/TimerApplication/obj/Debug/netcoreapp3.1/TimerApplication.dll
+/Users/melvinrajendran/Desktop/VR and Game Development 2020-21/TimerApplication/obj/Debug/netcoreapp3.1/TimerApplication.pdb
+/Users/melvinrajendran/Desktop/VR and Game Development 2020-21/TimerApplication/obj/Debug/netcoreapp3.1/TimerApplication.genruntimeconfig.cache
