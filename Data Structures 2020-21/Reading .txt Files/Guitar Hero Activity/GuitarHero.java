@@ -4,6 +4,12 @@ public class GuitarHero {
     public static void main(String[] args) {
         File fileName = new File("/Users/melvinrajendran/Desktop/Data Structures 2020-21/Reading .txt Files/Guitar Hero Activity/GuitarTabFile.txt");
         int fretNumber = 0, numChords = 0;
+        int[][] helperArr = {{29, 28, 27, 26, 25},
+                             {24, 23, 22, 21, 20},
+                             {19, 18, 17, 16, 15},
+                             {14, 13, 12, 11, 10},
+                             {10, 9, 8, 7, 6},
+                             {5, 4, 3, 2, 1}};
 
         try {
             BufferedReader input = new BufferedReader(new FileReader(fileName));
@@ -36,73 +42,7 @@ public class GuitarHero {
             for (int i = 0; i < arr.length; i++) {
                 for (int k  = 0; k < arr[i][j].length(); k++) {
                     if (arr[i][j].charAt(k) == 'o' || arr[i][j].charAt(k) == '*') {
-                        if (k == 0) {
-                            if (i == 0)
-                                formattedArr[29][j + 1] = "o";
-                            else if (i == 1)
-                                formattedArr[28][j + 1] = "o";
-                            else if (i == 2)
-                                formattedArr[27][j + 1] = "o";
-                            else if (i == 3)
-                                formattedArr[26][j + 1] = "o";
-                            else if (i == 4)
-                                formattedArr[25][j + 1] = "o";
-                        } else if (k == 1) {
-                            if (i == 0)
-                                formattedArr[24][j + 1] = "o";
-                            else if (i == 1)
-                                formattedArr[23][j + 1] = "o";
-                            else if (i == 2)
-                                formattedArr[22][j + 1] = "o";
-                            else if (i == 3)
-                                formattedArr[21][j + 1] = "o";
-                            else if (i == 4)
-                                formattedArr[20][j + 1] = "o";
-                        } else if (k == 2) {
-                            if (i == 0)
-                                formattedArr[19][j + 1] = "o";
-                            else if (i == 1)
-                                formattedArr[18][j + 1] = "o";
-                            else if (i == 2)
-                                formattedArr[17][j + 1] = "o";
-                            else if (i == 3)
-                                formattedArr[16][j + 1] = "o";
-                            else if (i == 4)
-                                formattedArr[15][j + 1] = "o";
-                        } else if (k == 3) {
-                            if (i == 0)
-                                formattedArr[14][j + 1] = "o";
-                            else if (i == 1)
-                                formattedArr[13][j + 1] = "o";
-                            else if (i == 2)
-                                formattedArr[12][j + 1] = "o";
-                            else if (i == 3)
-                                formattedArr[11][j + 1] = "o";
-                            else if (i == 4)
-                                formattedArr[10][j + 1] = "o";
-                        } else if (k == 4) {
-                            if (i == 0)
-                                formattedArr[10][j + 1] = "o";
-                            else if (i == 1)
-                                formattedArr[9][j + 1] = "o";
-                            else if (i == 2)
-                                formattedArr[8][j + 1] = "o";
-                            else if (i == 3)
-                                formattedArr[7][j + 1] = "o";
-                            else if (i == 4)
-                                formattedArr[6][j + 1] = "o";
-                        } else if (k == 5) {
-                            if (i == 0)
-                                formattedArr[5][j + 1] = "o";
-                            else if (i == 1)
-                                formattedArr[4][j + 1] = "o";
-                            else if (i == 2)
-                                formattedArr[3][j + 1] = "o";
-                            else if (i == 3)
-                                formattedArr[2][j + 1] = "o";
-                            else if (i == 4)
-                                formattedArr[1][j + 1] = "o";
-                        }
+                        formattedArr[helperArr[k][i]][j + 1] = "o";
                     }
                 }
             }
