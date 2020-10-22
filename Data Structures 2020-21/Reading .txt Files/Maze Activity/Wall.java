@@ -3,36 +3,27 @@ import java.awt.*;
 public class Wall {
     private int[] rows, cols;
     private Color color;
-    private int size;
     private String type;
 
-    public Wall(int[] rows, int[] cols, Color color, int size, String type) {
+    public Wall(int[] rows, int[] cols, Color color, String type) {
         this.rows = rows;
         this.cols = cols;
         this.color = color;
-        this.size = size;
         this.type = type;
     }
 
-    public Wall(int[] rows, int[] cols, int R, int G, int B, int size, String type) {
+    public Wall(int[] rows, int[] cols, int R, int G, int B, String type) {
         this.rows = rows;
         this.cols = cols;
         this.color = new Color(R, G, B);
-        this.size = size;
         this.type = type;
     }
 
-    public int[] getRows() {
-        return rows;
-    }
+    public int[] getRows() { return rows; }
 
-    public int[] getCols() {
-        return cols;
-    }
+    public int[] getCols() { return cols; }
 
-    public Color getColor() {
-        return color;
-    }
+    public Color getColor() { return color; }
 
     public GradientPaint getPaint() {
         int r = color.getRed(), g = color.getGreen(), b = color.getBlue();
@@ -77,11 +68,5 @@ public class Wall {
         }
     }
 
-    public int getSize() {
-        return size;
-    }
-
-    public String getType() {
-        return type;
-    }
+    public String getType() { return type; }
 }

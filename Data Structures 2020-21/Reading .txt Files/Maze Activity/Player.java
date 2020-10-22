@@ -1,5 +1,4 @@
 import java.awt.Color;
-import java.awt.Rectangle;
 import java.util.ArrayList;
 
 public class Player {
@@ -19,69 +18,35 @@ public class Player {
         this.map[location.getRow()][location.getCol()] = true;
     }
 
-    public Location getLocation() {
-        return location;
-    }
+    public Location getLocation() { return location; }
 
-    public int getDirection() {
-        return direction;
-    }
+    public int getDirection() { return direction; }
 
-    public void setDirection(int direction) {
-        this.direction = direction;
-    }
+    public int getSize() { return size; }
 
-    public int getSize() {
-        return size;
-    }
+    public int getBrightness() { return brightness; }
 
-    public int getSteps() {
-        return steps;
-    }
+    public void resetBrightness() { brightness = 255; }
 
-    public void addStep() {
-        this.steps++;
-    }
+    public Color getColor() { return color; }
 
-    public void resetSteps() {
-        this.steps = 0;
-    }
+    public int getSteps() { return steps; }
 
-    public int getBrightness() {
-        return brightness;
-    }
-
-    public void decreaseBrightness() {
-        this.brightness -= 25;
-    }
-
-    public void resetBrightness() {
-        this.brightness = 255;
-    }
-
-    public Color getColor() {
-        return color;
-    }
-
-    public boolean[][] getMap() {
-        return map;
-    }
+    public boolean[][] getMap() { return map; }
 
     public void updateMap() {
-        int initialC = getLocation().getCol() - 1, finalC = initialC + 3;
-        int initialR = getLocation().getRow() - 1, finalR = initialR + 3;
+        int initialC = location.getCol() - 1, finalC = initialC + 3;
+        int initialR = location.getRow() - 1, finalR = initialR + 3;
         try {
-            for (int c = initialC; c < finalC; c++) {
-                for (int r = initialR; r < finalR; r++) {
+            for (int c = initialC; c < finalC; c++)
+                for (int r = initialR; r < finalR; r++)
                     map[r][c] = true;
-                }
-            }
         } catch (ArrayIndexOutOfBoundsException e) {}
     }
 
     public void move(int keyCode, char[][] mazeArr, boolean render3D) {
         if (brightness > 0) {
-            int r = getLocation().getRow(), c = getLocation().getCol();
+            int r = location.getRow(), c = location.getCol();
             ArrayList<Character> validSpaces = new ArrayList<>();
             validSpaces.add(' ');
             validSpaces.add('U');
@@ -94,19 +59,19 @@ public class Player {
     
             if (!render3D) {
                 // if ((keyCode == 38 || keyCode == 87) && r > 0 && validSpaces.contains(mazeArr[r - 1][c])) {
-                //     getLocation().changeRowBy(-1);
+                //     location.changeRowBy(-1);
                 //     didMove = true;
                 // }
                 // if ((keyCode == 39 || keyCode == 68) && c < mazeArr[0].length - 1 && validSpaces.contains(mazeArr[r][c + 1])) {
-                //     getLocation().changeColBy(1);
+                //     location.changeColBy(1);
                 //     didMove = true;
                 // }
                 // if ((keyCode == 40 || keyCode == 83) && r < mazeArr.length - 1 && validSpaces.contains(mazeArr[r + 1][c])) {
-                //     getLocation().changeRowBy(1);
+                //     location.changeRowBy(1);
                 //     didMove = true;
                 // }
                 // if ((keyCode == 37  || keyCode == 65) && c > 0 && validSpaces.contains(mazeArr[r][c - 1])) {
-                //     getLocation().changeColBy(-1);
+                //     location.changeColBy(-1);
                 //     didMove = true;
                 // }
     
@@ -121,19 +86,19 @@ public class Player {
             } else {
                 if (keyCode == 38 || keyCode == 87) {
                     if (direction == 0 && r > 0 && validSpaces.contains(mazeArr[r - 1][c])) {
-                        getLocation().changeRowBy(-1);
+                        location.changeRowBy(-1);
                         didMove = true;
                     }
                     if (direction == 1 && c < mazeArr[0].length - 1 && validSpaces.contains(mazeArr[r][c + 1])) {
-                        getLocation().changeColBy(1);
+                        location.changeColBy(1);
                         didMove = true;
                     }
                     if (direction == 2 && r < mazeArr.length - 1 && validSpaces.contains(mazeArr[r + 1][c])) {
-                        getLocation().changeRowBy(1);
+                        location.changeRowBy(1);
                         didMove = true;
                     }
                     if (direction == 3 && c > 0 && validSpaces.contains(mazeArr[r][c - 1])) {
-                        getLocation().changeColBy(-1);
+                        location.changeColBy(-1);
                         didMove = true;
                     }
                 }
@@ -152,17 +117,11 @@ public class Player {
     
             if (didMove) {
                 steps++;
-                if (steps % 10 == 0) {
+                if (steps % 10 == 0)
                     brightness -= 25;
-                    steps = 0;
-                }
     
                 updateMap();
             }
         }
-    }
-
-    public Rectangle getRect() {
-        return new Rectangle(getLocation().getCol(), getLocation().getRow(), size, size);
     }
 }
