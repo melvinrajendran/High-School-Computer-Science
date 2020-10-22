@@ -7,7 +7,7 @@ import javax.swing.*;
 
 public class Maze extends JPanel implements KeyListener {
     JFrame frame;
-    boolean render3D = true;
+    boolean render3D = true, hasStarted = false, hasFinished = false;
 
     static char[][] mazeArr;
     static Player player;
@@ -69,6 +69,7 @@ public class Maze extends JPanel implements KeyListener {
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
         Graphics2D g2 = (Graphics2D) g;
+        g2.setFont(new Font("Phosphate", Font.PLAIN, 20));
 
         if (!render3D) {
             g2.setColor(Color.BLACK);
@@ -101,7 +102,7 @@ public class Maze extends JPanel implements KeyListener {
             g2.fillRect(player.getLocation().getCol() * 20 + 25, player.getLocation().getRow() * 20 + 25, player.getSize(), player.getSize());
 
             g2.setColor(Color.WHITE);
-            g2.drawString("PRESS [SPACE] TO CLOSE MAP", 240, 642);
+            g2.drawString("PRESS [SPACE] TO CLOSE MAP", 205, 620);
         } else {
             ArrayList<Wall> wallList = new ArrayList<>();
             int[] rows = {275, 375, 375, 275}, cols = {275, 275, 375, 375};
@@ -220,8 +221,14 @@ public class Maze extends JPanel implements KeyListener {
             }
             drawWalls(g2, wallList);
 
+            if (!hasStarted) {
+                g2.setColor(Color.WHITE);
+                g2.drawString("TRAVERSE THE MAZE IN SEARCH OF THE END.", 145, 330);
+                hasStarted = true;
+            }
+
             g2.setColor(Color.BLACK);
-            g2.drawString("PRESS [SPACE] TO OPEN MAP", 240, 642);
+            g2.drawString("PRESS [SPACE] TO OPEN MAP", 210, 620);
 
             if (player.getBrightness() < 125)
                 g2.setColor(Color.WHITE);
@@ -229,11 +236,12 @@ public class Maze extends JPanel implements KeyListener {
                 g2.setColor(Color.BLACK); 
 
             if (player.getBrightness() <= 25)
-                g2.drawString("YOUR FLASHLIGHT RAN OUT OF BATTERIES. YOU LOSE.", 155, 325);
+                g2.drawString("YOUR FLASHLIGHT RAN OUT OF BATTERIES. YOU LOSE.", 95, 330);
         
             if (mazeArr[player.getLocation().getRow()][player.getLocation().getCol()] == 'E') {
-                g2.drawString("YOU\'VE EMERGED FROM THE DEPTHS OF THE MAZE.", 160, 275);
-                g2.drawString("IT TOOK YOU " + player.getSteps() + " STEPS.", 250, 325);
+                g2.drawString("YOU\'VE EMERGED FROM THE DEPTHS OF THE MAZE.", 115, 310);
+                g2.drawString("IT TOOK YOU " + player.getSteps() + " STEPS.", 235, 350);
+                hasFinished = true;
             }
         }
     }
@@ -242,7 +250,8 @@ public class Maze extends JPanel implements KeyListener {
         if (e.getKeyCode() == 32)
             render3D = !render3D;
 
-        player.move(e.getKeyCode(), mazeArr, render3D);
+        if (!hasFinished)
+            player.move(e.getKeyCode(), mazeArr, render3D);
 
         repaint();
     }
