@@ -7,11 +7,10 @@ import javax.swing.*;
 
 public class Maze extends JPanel implements KeyListener {
     JFrame frame;
-    static char[][] mazeArr;
     boolean render3D = true;
 
-    Player player;
-    static int startRow, startCol, startDir;
+    static char[][] mazeArr;
+    static Player player;
 
     public Maze() {
         frame = new JFrame("Maze Program");
@@ -21,9 +20,6 @@ public class Maze extends JPanel implements KeyListener {
         frame.setResizable(false);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setVisible(true);
-
-        player = new Player(new Location(startRow, startCol), startDir, 20, Color.RED);
-        player.updateMap();
     }
 
     public static void main(String[] args) {
@@ -44,24 +40,23 @@ public class Maze extends JPanel implements KeyListener {
                 for (int c = 0; c < text.length(); c++) {
                     arr[r][c] = text.charAt(c);
                     if (text.charAt(c) == 'U' || text.charAt(c) == 'R' || text.charAt(c) == 'D' || text.charAt(c) == 'L') {
-                        startRow = r;
-                        startCol = c;
                         switch (text.charAt(c)) {
                             case 'U':
-                                startDir = 0;
+                                player = new Player(new Location(r, c), 0, 20, Color.CYAN);
                                 break;
                             case 'R':
-                                startDir = 1;
+                                player = new Player(new Location(r, c), 1, 20, Color.CYAN);
                                 break;
                             case 'D':
-                                startDir = 2;
+                                player = new Player(new Location(r, c), 2, 20, Color.CYAN);
                                 break;
                             case 'L':
-                                startDir = 3;
+                                player = new Player(new Location(r, c), 3, 20, Color.CYAN);
                                 break;
                             default:
                                 break;
                         }
+                        player.updateMap();
                     }
                 }
                 r++;
@@ -88,6 +83,9 @@ public class Maze extends JPanel implements KeyListener {
                         } else if (mazeArr[r][c] == 'B') {
                             g2.setColor(Color.YELLOW);
                             g2.fillRect(c * player.getSize() + 25, r * player.getSize() + 25, player.getSize(), player.getSize());
+                        } else if (mazeArr[r][c] == 'T') {
+                            g2.setColor(Color.RED);
+                            g2.fillRect(c * player.getSize() + 25, r * player.getSize() + 25, player.getSize(), player.getSize());
                         } else if (mazeArr[r][c] == 'E') {
                             g2.setColor(Color.GREEN);
                             g2.fillRect(c * player.getSize() + 25, r * player.getSize() + 25, player.getSize(), player.getSize());
@@ -101,12 +99,20 @@ public class Maze extends JPanel implements KeyListener {
 
             g2.setColor(player.getColor());
             g2.fillRect(player.getLocation().getCol() * 20 + 25, player.getLocation().getRow() * 20 + 25, player.getSize(), player.getSize());
+
+            g2.setColor(Color.WHITE);
+            g2.drawString("PRESS [SPACE] TO CLOSE MAP", 240, 642);
         } else {
             ArrayList<Wall> wallList = new ArrayList<>();
             int[] rows = {275, 375, 375, 275}, cols = {275, 275, 375, 375};
             wallList.add(new Wall(rows, cols, Color.BLACK, "W"));
 
             boolean isVisible = true;
+
+            if (mazeArr[player.getLocation().getRow()][player.getLocation().getCol()] == 'B')
+                player.resetBrightness();
+            if (mazeArr[player.getLocation().getRow()][player.getLocation().getCol()] == 'T')
+                player.decreaseBrightnessBy(100);
 
             for (int fov = 0; fov < 5; fov++) {
                 if (isVisible) {
@@ -213,10 +219,23 @@ public class Maze extends JPanel implements KeyListener {
                 }
             }
             drawWalls(g2, wallList);
-        }
 
-        if (mazeArr[player.getLocation().getRow()][player.getLocation().getCol()] == 'B')
-            player.resetBrightness();
+            g2.setColor(Color.BLACK);
+            g2.drawString("PRESS [SPACE] TO OPEN MAP", 240, 642);
+
+            if (player.getBrightness() < 125)
+                g2.setColor(Color.WHITE);
+            else
+                g2.setColor(Color.BLACK); 
+
+            if (player.getBrightness() <= 25)
+                g2.drawString("YOUR FLASHLIGHT RAN OUT OF BATTERIES. YOU LOSE.", 155, 325);
+        
+            if (mazeArr[player.getLocation().getRow()][player.getLocation().getCol()] == 'E') {
+                g2.drawString("YOU\'VE EMERGED FROM THE DEPTHS OF THE MAZE.", 160, 275);
+                g2.drawString("IT TOOK YOU " + player.getSteps() + " STEPS.", 250, 325);
+            }
+        }
     }
 
     public void keyPressed(KeyEvent e) {
@@ -305,6 +324,8 @@ public class Maze extends JPanel implements KeyListener {
                     case 0:
                         if (mazeArr[r - fov][c] == 'B')
                             return new Wall(rows, cols, currentBrightness, currentBrightness, 0, "F");
+                        else if (mazeArr[r - fov][c] == 'T')
+                            return new Wall(rows, cols, currentBrightness, 0, 0, "F");
                         else if (mazeArr[r - fov][c] == 'E')
                             return new Wall(rows, cols, 0, currentBrightness, 0, "F");
                         else
@@ -312,6 +333,8 @@ public class Maze extends JPanel implements KeyListener {
                     case 1:
                         if (mazeArr[r][c + fov] == 'B')
                             return new Wall(rows, cols, currentBrightness, currentBrightness, 0, "F");
+                        else if (mazeArr[r][c + fov] == 'T')
+                            return new Wall(rows, cols, currentBrightness, 0, 0, "F");
                         else if (mazeArr[r][c + fov] == 'E')
                             return new Wall(rows, cols, 0, currentBrightness, 0, "F");
                         else
@@ -319,6 +342,8 @@ public class Maze extends JPanel implements KeyListener {
                     case 2:
                         if (mazeArr[r + fov][c] == 'B')
                             return new Wall(rows, cols, currentBrightness, currentBrightness, 0, "F");
+                        else if (mazeArr[r + fov][c] == 'T')
+                            return new Wall(rows, cols, currentBrightness, 0, 0, "F");
                         else if (mazeArr[r + fov][c] == 'E')
                             return new Wall(rows, cols, 0, currentBrightness, 0, "F");
                         else
@@ -326,8 +351,10 @@ public class Maze extends JPanel implements KeyListener {
                     case 3:
                         if (mazeArr[r][c - fov] == 'B')
                             return new Wall(rows, cols, currentBrightness, currentBrightness, 0, "F");
+                        else if (mazeArr[r][c - fov] == 'T')
+                            return new Wall(rows, cols, currentBrightness, 0, 0, "F");
                         else if (mazeArr[r][c - fov] == 'E')
-                        return new Wall(rows, cols, 0, currentBrightness, 0, "F");
+                            return new Wall(rows, cols, 0, currentBrightness, 0, "F");
                         else
                             return new Wall(rows, cols, currentBrightness, currentBrightness, currentBrightness, "F");
                     default:

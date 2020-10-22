@@ -26,6 +26,8 @@ public class Player {
 
     public int getBrightness() { return brightness; }
 
+    public void decreaseBrightnessBy(int brightness) { this.brightness -= brightness; }
+
     public void resetBrightness() { brightness = 255; }
 
     public Color getColor() { return color; }
@@ -55,6 +57,7 @@ public class Player {
             validSpaces.add('L');
             validSpaces.add('E');
             validSpaces.add('B');
+            validSpaces.add('T');
             boolean didMove = false;
     
             if (!render3D) {
