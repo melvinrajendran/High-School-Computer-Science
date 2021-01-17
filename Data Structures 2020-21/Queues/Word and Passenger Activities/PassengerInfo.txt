@@ -1,0 +1,81 @@
+John Smith
+Dallas
+9:30 AM
+Jane Smith
+Phoenix
+12:30 PM
+Joe Jones
+Orlando
+10:30 AM
+John Johnson
+Orlando
+10:30 AM
+Jack Jackson
+Dallas
+9:30 AM
+Jimmy James
+Phoenix
+12:30 PM
+Juan Johnson
+Orlando
+10:30 AM
+Jake Jacobson
+Phoenix
+12:30 PM
+Ricardo Carlson
+Dallas
+9:30 AM
+Don Johnson
+Orlando
+10:30 AM
+Philip Smithers
+Dallas
+9:30 AM
+Phyllis Smithers
+Dallas
+9:30 AM
+Gertrude Stein
+Phoenix
+12:30 PM
+Franken Stein
+Orlando
+9:30 AM
+Logan Gaugain
+Phoenix
+12:30 PM
+Frank Stallone
+Miami
+9:45 AM
+Joseph Mendel
+Bermuda
+11:00 AM
+Harry Houdini
+Dallas
+9:55 AM
+Harry Henderson
+Calgary
+12:24 PM
+Millard Fillmore
+Los Angeles
+11:15 AM
+Fernando Valenzuela
+Miami
+9:15 AM
+WorldsMost InterestingMan
+Hong Kong
+9:45 PM
+Sebatian Larsson
+Sunderland
+9:55 AM
+James Dean
+Green Bay
+10:15 AM
+Paula Dean
+Chicago
+10:30 PM
+Mos Def
+Los Angeles
+11:15 AM
+Queen Latifa
+Los Angeles
+11:15 AM
