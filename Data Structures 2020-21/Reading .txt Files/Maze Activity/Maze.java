@@ -26,11 +26,11 @@ public class Maze extends JPanel implements KeyListener {
         mazeArr = new char[30][30];
         setBoard(mazeArr);
 
-        Maze maze = new Maze();
+        new Maze();
     }
 
     public static void setBoard(char[][] arr) {
-        File fileName = new File("/Users/melvinrajendran/Desktop/Data Structures 2020-21/Reading .txt Files/Maze Activity/Maze.txt");
+        File fileName = new File("/Users/melvinrajendran/Documents/Data Structures 2020-21/Reading .txt Files/Maze Activity/Maze.txt");
         try {
             BufferedReader input = new BufferedReader(new FileReader(fileName));
             String text;

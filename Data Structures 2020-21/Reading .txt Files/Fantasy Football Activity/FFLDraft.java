@@ -97,10 +97,7 @@ public class FFLDraft {
             return 0;
         }
     
-        public String toString() { 
-            // return name + ": " + position + " for " + team + " (Bye " + bye + ")\n\tPick: " + pick + " Overall: " + overall + " Standard Dev: " + stdDev + "\n\tHigh: " + highRd + " Low: " + lowRd + " Drafted: " + timesDrafted;
-            return String.format("%-25sPos: %-7sTeam: %-7sBye: %2s    Pick: %5s    Overall: %5s    Std Dev: %4s    High: %5s    Low: %5s    Drafted: %4s", name, position, team, bye, pick, overall, stdDev, highRd, lowRd, timesDrafted);
-        }
+        public String toString() { return String.format("%-25sPos: %-7sTeam: %-7sBye: %2s    Pick: %5s    Overall: %5s    Std Dev: %4s    High: %5s    Low: %5s    Drafted: %4s", name, position, team, bye, pick, overall, stdDev, highRd, lowRd, timesDrafted); }
     }
 
     public static ArrayList<FBPlayer> sortFBPlayerList(ArrayList<FBPlayer> list) {
