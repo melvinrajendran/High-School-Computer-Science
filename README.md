@@ -1,6 +1,2 @@
 # Introduction
-This is a repository of my high school (2017-2021) computer science programs. This includes extensive Java development, numerous Android applications, and Unity game development.
-
-# Contact
-For any questions on this repository, please contact Melvin Rajendran.
-  Email: melvin.rajendran@gmail.com
+This is a repository of my high school (2017-2021) Computer Science projects. This includes extensive Java, Android, and Unity development.
