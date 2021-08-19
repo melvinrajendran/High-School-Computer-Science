@@ -30,3 +30,43 @@ This is a repository of my old, high school (2017-2021) Computer Science project
 * GridWorld case study
 * Version control using GitHub Desktop
 * Game development using JavaFX
+
+## Mobile Application Development - Java, Android Studio
+
+* The activity lifecycle
+* Activities
+* Linear, Relative, and Constraint layouts
+* Fragments
+* Adapters
+* Widgets
+* Permissions
+* Multi-threading
+* Inner Classes
+* RESTful APIs
+
+## Data Structures - Java
+
+* Reading .txt files
+* Array
+* Linked list
+* Stack
+* Queue
+  * PriorityQueues
+* Set
+  * HashSet
+  * TreeSet
+* Map
+  * HashMap
+  * TreeMap
+* Binary search tree
+
+## Virtual Reality and Game Development - C#, Unity
+
+* The Unity game engine
+* Transform and Rigidbody
+* Physics-based movement and collisions
+* Cross-platform input
+* Keyframe animations
+* 2D and 3D game development
+* Real-time multiplayer games using Photon Unity Networking
+* ML-Agents
