@@ -14,6 +14,7 @@ This is a repository of my old, high school (2017-2021) Computer Science project
 * Arrays
 * For, while, and do while loops
   * Nested loops
+* Scanner
 * Methods
 * Selection and Insertion sorting
 * Binary search
