@@ -12,7 +12,7 @@ This is a repository of my old, high school (2017-2021) Computer Science project
   * If-else statements
   * Switch statements
 * Arrays
-* For, while, and do while loops
+* For, while, and do/while loops
   * Nested loops
 * Scanner
 * Methods
