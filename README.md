@@ -18,3 +18,15 @@ This is a repository of my old, high school (2017-2021) Computer Science project
 * Methods
 * Selection and insertion sorting algorithms
 * Binary search
+
+## AP Computer Science A - Java
+
+* ArrayList
+* Recursion
+* Object-oriented Programming
+* Interfaces
+* Static variables
+* Pass by value vs. pass by reference
+* GridWorld case study
+* Version control using GitHub Desktop
+* Game development using JavaFX
