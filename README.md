@@ -1,4 +1,4 @@
-# High School Computer Science Projects
+# High School Computer Science
 
 ![JuliaSetProgram](https://user-images.githubusercontent.com/44681827/130009941-fb472094-2b29-4391-9fb8-e1f4bf661004.png)
 
